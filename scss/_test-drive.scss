@@ -1,0 +1,126 @@
+@import 'vars';
+
+.test-drive {
+	padding-top: 150px;
+	background: $bg-color;
+}
+.test-drive__heading {
+	color: $text-color;
+	font-family: Arial;
+	font-size: 2.5rem;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+
+.test-drive__item {
+	border-bottom: 1px solid black;
+}
+.test-drive__title {
+	color: $text-color;
+	font-family: Arial;
+	font-size: 1.2rem;
+	font-weight: 700;
+	padding: 20px 0px 20px 0px;
+	width: 91%;
+}
+.test-drive__subtitle {
+	color: $text-color;
+	font-family: Arial;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 120%;
+	width: 91%;
+}
+
+details[open] summary ~ * {
+	animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+details summary::-webkit-details-marker {
+	display: none;
+}
+
+details summary {
+	position: relative;
+
+	width: 100%;
+	padding: 0.5rem 0;
+
+	position: relative;
+	cursor: pointer;
+	font-size: 1.25rem;
+	font-weight: 300;
+	list-style: none;
+
+	transition: transform 0.3s ease;
+}
+details summary img {
+	position: absolute;
+
+	right: -10%;
+}
+
+// !Другой способ добавления стрелки у тега details
+// details summary:after {
+// 	content: url(../images/content/arrow.svg);
+// 	color: black;
+// 	position: absolute;
+// 	font-size: 10px;
+// 	line-height: 0;
+// 	margin-top: 0.75rem;
+// 	right: 0;
+// 	font-weight: 200;
+// 	transition: 200ms linear;
+// }
+// details[open] summary:after {
+// 	content: url(../images/content/arrow.svg);
+// 	transform: rotate(180deg);
+// }
+details[open] img {
+	transform: rotate(180deg);
+}
+details summary {
+	outline: 0;
+}
+details p {
+	font-size: 0.95rem;
+	margin: 0 0 1rem;
+	padding-top: 1rem;
+}
+
+@media (max-width: 650px) {
+	.test-drive__heading {
+		font-size: 6vw;
+		text-align: center;
+	}
+	.test-drive {
+		padding-top: 80px;
+	}
+	.test-drive__title {
+		font-size: 4vw;
+	}
+}
+
+@media (max-width: 460px) {
+	.test-drive__title {
+		padding: 20px 0px 55px 0px;
+		text-align: center;
+		width: 100%;
+		font-size: 6vw;
+	}
+	details summary img {
+		top: 69%;
+		right: 41%;
+	}
+	.test-drive__subtitle {
+		text-align: center;
+	}
+}

@@ -1,0 +1,66 @@
+@import 'vars';
+
+.footer {
+	padding-top: 150px;
+	background: $bg-color;
+}
+
+.footer-hr {
+	height: 1px;
+	background: $text-color;
+}
+.footer__box {
+	display: flex;
+	justify-content: flex-start;
+	padding: 30px 0px;
+}
+.footer__left {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 47%;
+	span {
+		color: $text-color;
+		font-family: Arial;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 120%;
+	}
+}
+.footer__right {
+	span {
+		color: $text-color;
+		font-family: Arial;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 120%;
+		padding-right: 5px;
+	}
+	a {
+		color: $text-color;
+		font-family: Arial;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 120%;
+
+		text-decoration-line: underline;
+		display: inline-block;
+		transition: all 0.3s ease;
+		&:hover {
+			color: #439cfb;
+		}
+	}
+}
+@media (max-width: 672px) {
+	.footer {
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 470px) {
+	.footer__box {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+}
