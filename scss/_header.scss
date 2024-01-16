@@ -66,7 +66,11 @@
 }
 a {
 	text-decoration: none;
-	width: 100%;
+	display: inline-block;
+}
+.main-button {
+	display: flex;
+	text-align: center;
 }
 .btn-position {
 	margin-top: 40px;
@@ -92,6 +96,6 @@ a {
 	}
 	.btn {
 		display: flex;
-		margin: 40px auto;
+		justify-content: center;
 	}
 }

@@ -50,7 +50,12 @@
 
 a {
   text-decoration: none;
-  width: 100%;
+  display: inline-block;
+}
+
+.main-button {
+  display: flex;
+  text-align: center;
 }
 
 .btn-position {
@@ -76,7 +81,7 @@ a {
   }
   .btn {
     display: flex;
-    margin: 40px auto;
+    justify-content: center;
   }
 }
 .community {
@@ -220,6 +225,9 @@ a {
 @media (max-width: 627px) {
   .community {
     padding-top: 80px;
+  }
+  .main-button {
+    justify-content: center;
   }
   .community__top {
     flex-direction: column;
